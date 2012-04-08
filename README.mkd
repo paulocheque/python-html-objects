@@ -1,2 +1,10 @@
-Alternatives
-http://www.decalage.info/en/python/html
+Python HTML Objects
+
+A simple library to generate html tags using python code.
+
+* <http://pypi.python.org/pypi/python-html-objects>
+
+
+## Alternatives
+
+* http://www.decalage.info/en/python/html
