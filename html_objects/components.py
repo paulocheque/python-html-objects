@@ -174,6 +174,21 @@ class Panel(ComponentHtml):
         super(Panel, self).__init__(u'div', innerHtml=innerHtml, **kwargs)
 
 
+class InformationPanel(Panel):
+    """
+    <div><span class="label"><span><span class="value"><span></div>
+    """
+    def __init__(self, innerHtml=u'', label_class='', value_class='value', **kwargs):
+        super(Panel, self).__init__(u'div', innerHtml=innerHtml, **kwargs)
+        self.label_class = label_class
+        self.value_class = value_class
+        
+    def add_info(self, label, value):
+        self.add_component(Chunk(label, clazz=self.label_class))
+        self.add_component(Chunk(value, clazz=self.value_class))
+        self.add_component('<br/>')
+    
+
 class Table(ComponentHtml):
     """
     <table>
